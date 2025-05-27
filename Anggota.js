@@ -1,4 +1,4 @@
-const { createApp } = Vue;
+uconst { createApp } = Vue;
 
 createApp({
   data() {
@@ -9,7 +9,7 @@ createApp({
           isi: [
             {
               nama: "psdm",
-              img: "devisi/a/Divisi_Medif.png",
+              img: "Devisi/ketua/vectorpria.jpg",
               tugas: [
                 "1. Mengembangkan sumber daya mahasiswa",
                 "2. Mengadakan pelatihan",
