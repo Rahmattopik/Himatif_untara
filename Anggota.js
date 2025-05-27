@@ -9,7 +9,7 @@ createApp({
           isi: [
             {
               nama: "psdm",
-              img: "../Devisi/ketua/vectorpria.jpg",
+              img: "Devisi/ketua/vectorpria.jpg",
               tugas: [
                 "1. Mengembangkan sumber daya mahasiswa",
                 "2. Mengadakan pelatihan",
