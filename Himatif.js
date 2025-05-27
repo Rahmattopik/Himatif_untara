@@ -1,4 +1,4 @@
-const { createApp:index } = Vue;
+const { createApp } = Vue;
 
 createApp({
   data() {
