@@ -5,7 +5,7 @@ createApp({
     return {
       logo: [
         { img: "Logo/LogoHimatif.png", nama: "logo himatif" },
-        { img: "logo/untara.png", nama: "untara" },
+        { img: "Logo/untara.png", nama: "untara" },
       ],
       himatif: [
         { p: "adalah wadah pengembangan" },
