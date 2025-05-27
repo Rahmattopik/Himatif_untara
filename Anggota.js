@@ -1,4 +1,4 @@
-uconst { createApp } = Vue;
+const { createApp } = Vue;
 
 createApp({
   data() {
