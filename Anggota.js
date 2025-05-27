@@ -1,4 +1,4 @@
-const { createApp:devisi } = Vue;
+const { createApp } = Vue;
 
 createApp({
   data() {
