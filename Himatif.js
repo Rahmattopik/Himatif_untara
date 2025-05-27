@@ -70,11 +70,11 @@ createApp({
     },
     ],
   info: [
-        { img: "logo/LogoHimatif.png", nama: "logo himatif" },
-        { img: "logo/untara.png", nama: "untara" },
-        { img: "logo/untara.png", nama: "untara" },
-        { img: "logo/LogoHimatif.png", nama: "logo himatif" },
-        { img: "logo/LogoHimatif.png", nama: "logo himatif" },
+        { img: "Logo/LogoHimatif.png", nama: "logo himatif" },
+        { img: "Logo/untara.png", nama: "untara" },
+        { img: "Logo/untara.png", nama: "untara" },
+        { img: "Logo/LogoHimatif.png", nama: "logo himatif" },
+        { img: "Logo/LogoHimatif.png", nama: "logo himatif" },
       ],
     
     devisi:[
