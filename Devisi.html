@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>devisi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="icon" href="logo/LogoHimatif.png" />
+  <link rel="stylesheet" href="Style.css" />
+     <link rel="stylesheet" href="animasi.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+</head>
+<body id="anggota">
+<nav class="fixed-top navbar navbar-expand-lg bg">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">
+        <img src="Logo/LogoHimatif.png" alt="Logo Himatif" style="height: 40px;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active bga " aria-current="page" href="index.html">Beranda</a>
+        <a class="nav-link bga" href="Devisi.html">Devisi</a>
+        <a class="nav-link bga" href="Civitas.html">Civitas Akademik</a>
+        <a class="nav-link bga" href="karya.html">Karya Mahasiswa</a>
+          <a class="nav-link bga" href="tugas.html">tugas himatif</a>
+        <a class="nav-link bga" href="saran.html">saran</a>
+        
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div class="d-flex justify-content-center align-items-center me-md-4 mb-3 mb-md-0">
+        <img src="Logo/LogoHimatif.png" alt="Logo" style="height: 7rem;" class="me-2" />
+        <img src="Logo/untara.png" alt="Logo" style="height: 7rem;" />
+      </div>
+      <div class="text-center text-md-start">
+        <h1 class="mb-2">
+          Himpunan Mahasiswa
+          <span class="d-block">Teknologi Informasi</span>
+        </h1>
+<p class=" p-1 rounded tagline">
+  <span>''</span> T.Informasi Beda! T.Informasi satu! <br>
+  T.Informasi beda tapi satu!
+  
+</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <button class="btn btn-success px-4" @click="gantiDivisi('psdm')">PSDM</button>
+        <button class="btn btn-success px-4" @click="gantiDivisi('kominfo')">Kominfo</button>
+        <button class="btn btn-success px-4" @click="gantiDivisi('litbang')">Litbang</button>
+        <button class="btn btn-success px-4" @click="gantiDivisi('keorganisasian')">keorganisasian</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-4" v-cloak>
+    <!-- Gambar dan Nama Divisi -->
+    <div class="card mb-4" v-if="divisi && divisi.isi.length">
+      <img :src="divisi.isi[0].img" class="card-img-top" alt="Gambar Divisi" />
+      <div class="card-body">
+        <h3 class="card-title text-capitalize">{{ divisi.isi[0].nama }}</h3>
+      </div>
+    </div>
+
+    <!-- Tugas -->
+    <div class="mb-4" v-if="divisi && divisi.isi.length">
+      <h4>Tugas:</h4>
+      <ul class="list-group">
+        <li class="list-group-item" v-for="(tugasItem, index) in divisi.isi[0].tugas" :key="index">
+          {{ tugasItem }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Program Kerja -->
+    <div class="mb-4" v-if="divisi && divisi.isi.length">
+      <h4>Program Kerja:</h4>
+      <ul class="list-group">
+        <li class="list-group-item" v-for="(prog, index) in divisi.isi[0].program" :key="index">
+          <strong>{{ prog.isi }}</strong> - {{ prog.text }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Anggota -->
+    <div v-if="divisi && divisi.anggota.length">
+      <h4>Anggota:</h4>
+      <div class="row">
+        <div class="col-md-4 mb-3" v-for="(orang, index) in divisi.anggota" :key="index">
+          <div class="card h-100 text-center">
+            <img :src="orang.img" class="card-img-top" alt="Foto Anggota" style="object-fit: cover; height: 200px;" />
+            <div class="card-body">
+              <h5 class="card-title">{{ orang.nama }}</h5>
+              <p class="card-text">{{ orang.sebagai }}</p>
+              <span class="badge bg-success text-uppercase">{{ orang.devisi }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<footer class="bg-dark text-white py-4 text-lg-center">
+  <div class="container text-center">
+    <h1 class="h4">UNIVERSITAS TANGERANG RAYA</h1>
+    <p>Kampus: Perumahan Sudirman Indah, Jl. Ki Mas Laeng No. 25, Kotomas, Tigaraksa, Kab. Tangerang</p>
+    <p>Contact Person:</p>
+
+    <div class="d-flex  justify-content-center align-items-center gap-3 mt-3">
+      <div class="d-flex align-items-center gap-2">
+        <i data-feather="phone"></i>
+
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i data-feather="instagram"></i>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i data-feather="mail"></i>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <i data-feather="video"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-3 bg-success py-2">
+    <p class="mb-0">© HIMATIF UNTARA 2025</p>
+  </div>
+</footer>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace()
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script type="module" src="Anggota.js"></script>
+</body>
+</html>
