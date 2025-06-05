@@ -15,9 +15,9 @@ createApp({
       ],
       ketua:[
         {
-          bagian:"(ketua)",
+          bagian:"(ketua bem)",
           nama:"Arsalan padhur rohman",
-          img:"Img/contoh.png",
+          img:"img/contoh.png",
           ig:"",
           visi:"menjadikan himatif menjadi organisasi yg lebih unggul inovatif dan berintegrasi dalam mengembangkan potensi mahasiswa serta pengurus teknologi informasi Untara.",
           misi: [
@@ -32,9 +32,9 @@ createApp({
             ]
         },
         {
-          bagian:"(wakil ketua)",
+          bagian:"(wakil ketua bem)",
           nama:"Ryandika diva fahlevi",
-        img:"Img/contoh.png", 
+        img:"img/contoh.png", 
         ig:"link"
         }
         ],
